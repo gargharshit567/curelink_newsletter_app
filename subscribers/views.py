@@ -6,13 +6,10 @@ from content.models import Topic
 from django.conf import settings
 from django.core.mail import send_mail
 from .serializers import SubscriberSerializer
-import requests
 # Create your views here.
 
 
-
-def send_simple_message():
-    send_mail('Test Mail','hi ','AAgya kya <gargharshit823@gmail.com>', ['harshitashar14@gmail.com'])
+   
 #send_simple_message()
 
 @api_view(['POST'])
@@ -29,10 +26,7 @@ def subscribeUser(request):
                     'code': 500,
                  })
 
-        subscriber.save()       
-        # for topic in topics:
-        #     if not Topic.objects.filter(topic = topic):
-        #         Topic.objects.create(topic =topic)
+        subscriber.save()
         
     except Exception as e:
         print(e)
