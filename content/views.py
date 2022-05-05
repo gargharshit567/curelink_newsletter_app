@@ -10,6 +10,7 @@ from django.conf import settings
 from .serializers import ContentSerializer, TopicSerializer
 from datetime import datetime, timedelta
 from curelink.celery import send_email_to_reciepent
+from drf_yasg.utils import swagger_auto_schema
 
 
 # Create your views here.
